@@ -20,13 +20,13 @@ public class Dog extends Pet {
 	}
 	
 	// Frag irgendeine Katze --> Namen
-	public void askACatItsName() {
-		System.out.println(Controller.getSomeRandomFelidae().getName(this));
+	public String askACatItsName() {
+		return Controller.getSomeRandomFelidae().getName(this);
 	}
 
 	@Override
-	public void petSounds() {
-		System.out.println(this.name + ": Bark!");	
+	public String petSounds() {
+		return name + ": Bark!";	
 	}
 	
 	

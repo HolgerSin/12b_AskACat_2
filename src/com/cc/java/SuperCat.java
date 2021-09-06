@@ -9,19 +9,19 @@ public class SuperCat extends Pet{
 	}
 
 	// Frag irgendeine Katze --> Namen
-	public void askACatItsName() {	
-		System.out.println(Controller.getSomeRandomFelidae().getName(this));
+	public String askACatItsName() {	
+		return Controller.getSomeRandomFelidae().getName(this);
 	}
 	
 	
 	// Frag irgendeine Katze --> Alter
 	// (Cat) felidae | (Tomcat) felidae :: Downcasting
-	public void askACatHerAge() {
+	public String askACatHerAge() {
 		SuperCat felidae = Controller.getSomeRandomFelidae();
 		if (felidae instanceof Cat) {
-			System.out.println(((Cat) felidae).tellYourAge(this));	
+			return (((Cat) felidae).tellYourAge(this));	
 		} else {
-			System.out.println(((Tomcat) felidae).tellYourAge(this));
+			return (((Tomcat) felidae).tellYourAge(this));
 		}
 	}
 	
@@ -43,8 +43,8 @@ public class SuperCat extends Pet{
 	}
 	
 	@Override
-	public void petSounds() {
-		System.out.println(this.name + ": Meeeoow!");	
+	public String petSounds() {
+		return name + ": Meeeoow!";	
 	}
 
 }
